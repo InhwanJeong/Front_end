@@ -18,9 +18,41 @@ window.onload = function () {
 
         } else {
             firstSlide.classList.add(SHOWING_CLASS);
-        }
+        }        
     }
 
+    function circleSlide(){
+        const circleSlide = document.querySelector(".circle_slider");        
+        const imgs = circleSlide.querySelectorAll("img");
+        let imgSrcs = [];
+                
+        for (let i = 0; i < imgs.length; i++) {
+            imgSrcs.push(imgs[i].src);                 
+        }
+        
+        for (let i = 1; i < imgs.length; i++) {                            
+            imgs[i].src = imgSrcs[i-1]; 
+        }
+        imgs[0].src = imgSrcs[4];        
+        setInterval(circleSlideLoop, 2000);
+    }
+    
+    function circleSlideLoop(){
+        const circleSlide = document.querySelector(".circle_slider");        
+        const imgs = circleSlide.querySelectorAll("img");
+        let imgSrcs = [];
+                
+        for (let i = 0; i < imgs.length; i++) {
+            imgSrcs.push(imgs[i].src);                 
+        }
+        
+        for (let i = 1; i < imgs.length; i++) {                            
+            imgs[i].src = imgSrcs[i-1]; 
+        }
+        imgs[0].src = imgSrcs[4]; 
+    }
+    
     slide();
     setInterval(slide, 2000);
+    setTimeout(circleSlide, 4000);
 };
