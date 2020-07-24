@@ -50,6 +50,12 @@ body {
 .circle_slider_item{                       
     border-radius: 50px;       
     position: absolute;
+    transition: all 1s ease-in-out;
+}
+
+.circle_slider_item:nth-child(1){    
+    top: 0px;
+    left: 0px;    
 }
 
 .circle_slider_item:nth-child(1)>img{
@@ -59,13 +65,14 @@ body {
     border-radius: 50px; 
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
-    -webkit-border-radius: 50px;    
-    opacity: 0;    
+    -webkit-border-radius: 50px;
+    opacity: 0;     
+    transition: all 1s ease-in-out;
 }
 
 .circle_slider_item:nth-child(2){    
     top: 50px;
-    left: 50px;;
+    left: 50px;    
 }
 
 .circle_slider_item:nth-child(2)>img{
@@ -76,6 +83,7 @@ body {
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
     -webkit-border-radius: 50px;    
+    transition: all 1s ease-in-out;
 }
 .circle_slider_item:nth-child(3){    
     top: 90px;
@@ -88,6 +96,7 @@ body {
     -moz-border-radius: 70px; 
     -khtml-border-radius: 70px; 
     -webkit-border-radius: 70px;
+    transition: all 1s ease-in-out;
 }
 
 .circle_slider_item:nth-child(4){
@@ -102,6 +111,7 @@ body {
     -moz-border-radius: 100px; 
     -khtml-border-radius: 100px; 
     -webkit-border-radius: 100px;
+    transition: all 1s ease-in-out;
 }
 
 .circle_slider_item:nth-child(5){
@@ -116,6 +126,7 @@ body {
     -moz-border-radius: 70px; 
     -khtml-border-radius: 70px; 
     -webkit-border-radius: 70px;   
+    transition: all 1s ease-in-out;
 }
 
 .circle_slider_item:nth-child(6){
@@ -131,167 +142,22 @@ body {
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
     -webkit-border-radius: 50px;   
+    transition: all 1s ease-in-out;
 }
 
-.first_ani{
-    animation: pre3 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-fill-mode: forwards;
+.circle_slider_item:nth-child(7){
+    top: 0px;
+    left: 450px;
 }
 
-.second_ani{
-    animation: pre2 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-fill-mode: forwards;
-}
-.third_ani{
-    animation: pre1 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-fill-mode: forwards;
-}
-.fourth_ani{
-    animation: now 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-fill-mode: forwards;
-}
-.fifth_ani{
-    animation: next1 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);    
-    animation-fill-mode: forwards;
-}
-
-.sixth_ani{
-    animation: next2 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-fill-mode: forwards;
-}
-
-@keyframes pre3{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-        opacity: 1;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-        opacity: 1;
-    }
-}
-
-@keyframes pre2{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 70px;
-        height: 70px;
-        -moz-border-radius: 70px; 
-        -khtml-border-radius: 70px; 
-        -webkit-border-radius: 70px;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 70px;
-        height: 70px;
-        -moz-border-radius: 70px; 
-        -khtml-border-radius: 70px; 
-        -webkit-border-radius: 70px;
-    }
-}
-
-@keyframes pre1{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 100px;
-        height: 100px;
-        -moz-border-radius: 100px; 
-        -khtml-border-radius: 100px; 
-        -webkit-border-radius: 100px;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 100px;
-        height: 100px;
-        -moz-border-radius: 100px; 
-        -khtml-border-radius: 100px; 
-        -webkit-border-radius: 100px;
-    }
-}
-
-@keyframes now{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
-        width: 70px;
-        height: 70px;
-        -moz-border-radius: 70px; 
-        -khtml-border-radius: 70px; 
-        -webkit-border-radius: 70px;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 70px;
-        height: 70px;
-        -moz-border-radius: 70px; 
-        -khtml-border-radius: 70px; 
-        -webkit-border-radius: 70px;
-    }
-}
-
-@keyframes next1{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-    }
-}
-
-@keyframes next2{
-    0%{
-
-    }
-    50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-        opacity: 0;
-    }
-    100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        width: 50px;
-        height: 50px;
-        -moz-border-radius: 50px; 
-        -khtml-border-radius: 50px; 
-        -webkit-border-radius: 50px;
-        opacity: 0;
-    }
+.circle_slider_item:nth-child(7)>img{
+    border: 1px solid rgb(161, 156, 156);
+    width: 50px;
+    height: 50px;    
+    border-radius: 50px; 
+    -moz-border-radius: 50px; 
+    -khtml-border-radius: 50px; 
+    -webkit-border-radius: 50px;   
+    transition: all 1s ease-in-out;
+    opacity: 0;
 }

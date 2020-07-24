@@ -1,18 +1,32 @@
 window.onload = function () {
     const SHOWING_CLASS = "showing";
-    const firstSlide = document.querySelector(".slider__item:first-child");
-    ANIMATION_NAME = ["first_ani", "second_ani", "third_ani", "fourth_ani", "fifth_ani", "sixth_ani"];  
-    CIRCLE_ITEM_POS_TOP = ["0", "50", "90"];
-    CIRCLE_ITEM_POS_LEFT = ["0"];
+    const firstSlide = document.querySelector(".slider__item:first-child");    
+    CIRCLE_ITEM_POS_TOP = ["0", "50", "90", "120", "90", "50", "0"];
+    CIRCLE_ITEM_POS_LEFT = ["0", "50", "120", "200", "310", "400", "450"];
+    CIRCLE_ITEM_SIZE = ["50", "50", "70", "100", "70", "50", "50"];
     
+    let backNum = 0;
+    let backNum2 = 6;
+    let backNum3 = 5;
     let count = 0;    
-    const circleSlides = [
+
+    const circleSlideImg = [
         document.querySelector(".circle_slider_item:nth-child(1)>img"),
         document.querySelector(".circle_slider_item:nth-child(2)>img"),
         document.querySelector(".circle_slider_item:nth-child(3)>img"),
         document.querySelector(".circle_slider_item:nth-child(4)>img"),
         document.querySelector(".circle_slider_item:nth-child(5)>img"),
-        document.querySelector(".circle_slider_item:nth-child(6)>img")
+        document.querySelector(".circle_slider_item:nth-child(6)>img"),
+        document.querySelector(".circle_slider_item:nth-child(7)>img")
+    ];
+    const circleSlideList = [
+        document.querySelector(".circle_slider_item:nth-child(1)"),
+        document.querySelector(".circle_slider_item:nth-child(2)"),
+        document.querySelector(".circle_slider_item:nth-child(3)"),
+        document.querySelector(".circle_slider_item:nth-child(4)"),
+        document.querySelector(".circle_slider_item:nth-child(5)"),
+        document.querySelector(".circle_slider_item:nth-child(6)"),
+        document.querySelector(".circle_slider_item:nth-child(7)")
     ];
 
     function slide() {
@@ -33,59 +47,42 @@ window.onload = function () {
             firstSlide.classList.add(SHOWING_CLASS);
         }        
     }
-
-    //todo 마지막 슬라이드 사진 바꾸기
-    //todo 좌표값 실제로 바꾸기
     
     function circleSlide(){        
-        // for(let i = 0; i<circleSlides.length; i++){
-        //     circleSlides[i].classList.remove("first_ani");
-        //     circleSlides[i].classList.remove("second_ani");
-        //     circleSlides[i].classList.remove("third_ani");
-        //     circleSlides[i].classList.remove("fourth_ani");
-        //     circleSlides[i].classList.remove("fifth_ani");
-        //     circleSlides[i].classList.remove("sixth_ani");                        
-        // }
+        // 캐러셀 원 크기 변경 소스        
+        for(let i = 0; i<circleSlideImg.length; i++){
+            circleSlideImg[i].style.width = CIRCLE_ITEM_SIZE[(i+count+1)%7] + "px";
+            circleSlideImg[i].style.height = CIRCLE_ITEM_SIZE[(i+count+1)%7] + "px";                                    
+        }
 
-        // for(let i = 0; i<circleSlides.length; i++){
-        //     circleSlides[i].classList.add(ANIMATION_NAME[(i+count)%6]);
-        // }
-        const test = document.querySelector(".circle_slider_item:nth-child(3)");
-        test.style.top = "90px";
-        test.style.left = "120px";
-        count += 1;        
-    }
+        // 캐러셀 투명도 조절
+        if(backNum === -1) backNum = 6;        
+        if(backNum2 === -1) backNum2 = 6;
+        if(backNum3 === -1) backNum3 = 6;
 
-    // function circleSlide(){
-    //     const circleSlide = document.querySelector(".circle_slider");                
-    //     const imgs = circleSlide.querySelectorAll("img");
-    //     let imgSrcs = [];
-                
-    //     for (let i = 0; i < imgs.length; i++) {
-    //         imgSrcs.push(imgs[i].src);                 
-    //     }
+        circleSlideImg[backNum].style.opacity = "1.0";
+        circleSlideImg[backNum2].style.opacity = "0";
+        circleSlideImg[backNum3].style.opacity = "0";        
+
+        // 마지막 슬라이드 사진 바꾸기
+        const circleSlide = document.querySelector(".circle_slider");                
+        const imgs = circleSlide.querySelectorAll("img");
         
-    //     for (let i = 1; i < imgs.length; i++) {                            
-    //         imgs[i].src = imgSrcs[i-1]; 
-    //     }
-    //     imgs[0].src = imgSrcs[4];        
-    //     setInterval(circleSlideLoop, 2000);
-    // }
-    
-    // function circleSlideLoop(){
-    //     const circleSlide = document.querySelector(".circle_slider");        
-    //     const imgs = circleSlide.querySelectorAll("img");
-    //     let imgSrcs = [];
-                
-    //     for (let i = 0; i < imgs.length; i++) {
-    //         imgSrcs.push(imgs[i].src);                 
-    //     }
+        imgs[backNum].src = imgs[backNum3].src;
+        imgs[backNum2].src = imgs[backNum3].src;
         
-    //     for (let i = 1; i < imgs.length; i++) {                            
-    //         imgs[i].src = imgSrcs[i-1]; 
-    //     }
-    //     imgs[0].src = imgSrcs[4]; 
-    // }
+
+        // 캐러셀 원 이동 소스
+        for(let i = 0; i<circleSlideList.length; i++){
+            circleSlideList[i].style.top = CIRCLE_ITEM_POS_TOP[(i+count+1)%7] + "px";
+            circleSlideList[i].style.left = CIRCLE_ITEM_POS_LEFT[(i+count+1)%7] + "px";            
+        }        
+        
+        count += 1;
+        backNum -= 1;
+        backNum2 -= 1;
+        backNum3 -= 1;        
+    }        
     
     slide();
     setInterval(slide, 2000);
