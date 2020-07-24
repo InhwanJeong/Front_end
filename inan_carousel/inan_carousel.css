@@ -39,18 +39,17 @@ body {
 
 
   .circle_slider{
-    position: absolute;
-    transform: translate(70%, 60%);                       
+    transform: translate(65%, 55%);                       
     width: 50%;
     height: 500px;            
     z-index: 2;            
-    position: relative; 
-    
+    /* position: relative;*/
+    position: absolute;     
 }
 
 .circle_slider_item{                       
-    border-radius: 50px;            
-    float: left;    
+    border-radius: 50px;       
+    position: absolute;
 }
 
 .circle_slider_item:nth-child(1)>img{
@@ -60,77 +59,105 @@ body {
     border-radius: 50px; 
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
-    -webkit-border-radius: 50px;
-    animation: pre3 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
-    opacity: 0;
+    -webkit-border-radius: 50px;    
+    opacity: 0;    
+}
+
+.circle_slider_item:nth-child(2){    
+    top: 50px;
+    left: 50px;;
 }
 
 .circle_slider_item:nth-child(2)>img{
     border: 1px solid rgb(161, 156, 156);
     width: 50px;
-    height: 50px;
-    margin-top: 50px;
+    height: 50px;    
     border-radius: 50px; 
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
-    -webkit-border-radius: 50px;
-    animation: pre2 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
+    -webkit-border-radius: 50px;    
 }
-
+.circle_slider_item:nth-child(3){    
+    top: 90px;
+    left: 120px;    
+}
 .circle_slider_item:nth-child(3)>img{
     width: 70px;
-    height: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 80px;
+    height: 70px;    
     border-radius: 70px; 
     -moz-border-radius: 70px; 
     -khtml-border-radius: 70px; 
     -webkit-border-radius: 70px;
-    animation: pre1 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
+}
+
+.circle_slider_item:nth-child(4){
+    top: 120px;
+    left: 200px;
 }
 
 .circle_slider_item:nth-child(4)>img{
     width: 100px;
-    height: 100px;
-    margin-top: 90px;
+    height: 100px;    
     border-radius: 100px; 
     -moz-border-radius: 100px; 
     -khtml-border-radius: 100px; 
     -webkit-border-radius: 100px;
-    animation: now 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
+}
+
+.circle_slider_item:nth-child(5){
+    top: 90px;
+    left: 310px;
 }
 
 .circle_slider_item:nth-child(5)>img{
     width: 70px;
-    height: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 80px;
+    height: 70px;    
     border-radius: 70px; 
     -moz-border-radius: 70px; 
     -khtml-border-radius: 70px; 
-    -webkit-border-radius: 70px;
-    animation: next1 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
+    -webkit-border-radius: 70px;   
+}
+
+.circle_slider_item:nth-child(6){
+    top: 50px;
+    left: 400px;
 }
 
 .circle_slider_item:nth-child(6)>img{
     border: 1px solid rgb(161, 156, 156);
     width: 50px;
-    height: 50px;
-    margin-top: 50px;
+    height: 50px;    
     border-radius: 50px; 
     -moz-border-radius: 50px; 
     -khtml-border-radius: 50px; 
-    -webkit-border-radius: 50px;
-    animation: next2 2s 2s  cubic-bezier(0.0, 0.0, 0.58, 1.0);
-    animation-direction: normal;
-    
+    -webkit-border-radius: 50px;   
+}
+
+.first_ani{
+    animation: pre3 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    animation-fill-mode: forwards;
+}
+
+.second_ani{
+    animation: pre2 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    animation-fill-mode: forwards;
+}
+.third_ani{
+    animation: pre1 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    animation-fill-mode: forwards;
+}
+.fourth_ani{
+    animation: now 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    animation-fill-mode: forwards;
+}
+.fifth_ani{
+    animation: next1 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);    
+    animation-fill-mode: forwards;
+}
+
+.sixth_ani{
+    animation: next2 2s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    animation-fill-mode: forwards;
 }
 
 @keyframes pre3{
@@ -139,7 +166,6 @@ body {
     }
     50%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 50px);        
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
@@ -148,8 +174,7 @@ body {
         opacity: 1;
     }
     100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 50px);        
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
@@ -164,8 +189,7 @@ body {
 
     }
     50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 40px);        
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 70px;
         height: 70px;
         -moz-border-radius: 70px; 
@@ -173,8 +197,7 @@ body {
         -webkit-border-radius: 70px;
     }
     100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 40px);        
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 70px;
         height: 70px;
         -moz-border-radius: 70px; 
@@ -188,8 +211,7 @@ body {
 
     }
     50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 10px);
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 100px;
         height: 100px;
         -moz-border-radius: 100px; 
@@ -197,8 +219,7 @@ body {
         -webkit-border-radius: 100px;
     }
     100%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 10px);
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 100px;
         height: 100px;
         -moz-border-radius: 100px; 
@@ -212,8 +233,7 @@ body {
 
     }
     50%{
-        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 0px);
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);        
         width: 70px;
         height: 70px;
         -moz-border-radius: 70px; 
@@ -222,7 +242,6 @@ body {
     }
     100%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, 0px);
         width: 70px;
         height: 70px;
         -moz-border-radius: 70px; 
@@ -237,7 +256,6 @@ body {
     }
     50%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, -40px);
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
@@ -246,7 +264,6 @@ body {
     }
     100%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, -40px);
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
@@ -261,7 +278,6 @@ body {
     }
     50%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, -50px);
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
@@ -271,7 +287,6 @@ body {
     }
     100%{
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.58, 1.0);
-        transform: translate(70px, -50px);
         width: 50px;
         height: 50px;
         -moz-border-radius: 50px; 
