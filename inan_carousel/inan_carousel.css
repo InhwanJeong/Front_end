@@ -44,7 +44,7 @@ body {
     height: 500px;            
     z-index: 2;            
     /* position: relative;*/
-    position: absolute;     
+    position: absolute;         
 }
 
 .circle_slider_item{                       

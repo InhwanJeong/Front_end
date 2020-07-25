@@ -1,10 +1,11 @@
 window.onload = function () {
     const SHOWING_CLASS = "showing";
     const firstSlide = document.querySelector(".slider__item:first-child");    
+    const circleSlider = document.querySelector(".circle_slider");
     CIRCLE_ITEM_POS_TOP = ["0", "50", "90", "120", "90", "50", "0"];
     CIRCLE_ITEM_POS_LEFT = ["0", "50", "120", "200", "310", "400", "450"];
-    CIRCLE_ITEM_SIZE = ["50", "50", "70", "100", "70", "50", "50"];
-    
+    CIRCLE_ITEM_SIZE = ["50", "50", "70", "100", "70", "50", "50"];    
+
     let backNum = 0;
     let backNum2 = 6;
     let backNum3 = 5;
@@ -84,6 +85,26 @@ window.onload = function () {
         backNum3 -= 1;        
     }        
     
+    // 창을 켰을 때 circleSlider 표시 및 숨김    
+    if(window.innerWidth < 700){
+        circleSlider.style.opacity = "0";
+    }
+    else{
+        circleSlider.style.opacity = "1";
+    }
+
+    // 창 사이즈 조절시 circleSlider 표시 및 숨김
+    function circleSliderResize(){
+        if(window.innerWidth < 700){
+            circleSlider.style.opacity = "0";
+        }
+        else{
+            circleSlider.style.opacity = "1";
+        }
+    }
+
+    let circleSlideResizeVar = addEventListener("resize", circleSliderResize); 
+
     slide();
     setInterval(slide, 2000);
     setInterval(circleSlide, 2000);
