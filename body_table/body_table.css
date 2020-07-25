@@ -1,0 +1,52 @@
+article, blockquote, body, dd, div, dl, dt, 
+h1, h2, h3, h4, html, li, main, ol, p, section,
+table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a.cardType{
+    display: block;
+}
+
+.cardType{
+    border-radius: 3px;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: rgba(0,0,0,.84);
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.SectionContainerLayout{
+    margin-top: 24px;
+    margin-bottom: 40px;
+    padding: 0 16px;
+}
+
+.titleContentWrapper{
+    margin-bottom: 16px;
+}
+
+.cardListGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.cardList{
+
+}
+
+.card{
+
+}
