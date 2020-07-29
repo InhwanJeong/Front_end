@@ -5,6 +5,11 @@ table, tbody, td, th, thead, tr, ul {
     padding: 0;
 }
 
+main{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 a.cardType{
     display: block;
 }
