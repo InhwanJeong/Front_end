@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+
+    <style>
+        .flex-container{
+            /* display: flex; */
+            display: inline-flex ;
+
+            /* flex-direction: row; 디폴트 값 */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            flex-direction: column-reverse;
+
+            flex-wrap: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+    </div>
+</body>
+</html>

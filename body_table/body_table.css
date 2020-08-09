@@ -1,10 +1,4 @@
-article, blockquote, body, dd, div, dl, dt, 
-h1, h2, h3, h4, html, li, main, ol, p, section,
-table, tbody, td, th, thead, tr, ul {
-    margin: 0;
-    padding: 0;
-}
-
+@import "../reset.css";
 main{
     padding-left: 10%;
     padding-right: 10%;
