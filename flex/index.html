@@ -10,13 +10,15 @@
         .flex-container{
             /* display: flex; */
             display: inline-flex ;
-
+            height: 600px;
             /* flex-direction: row; 디폴트 값 */
             /* flex-direction: row-reverse; */
-            /* flex-direction: column; */
-            flex-direction: column-reverse;
-
-            flex-wrap: row;
+            /* flex-direction: column; */            
+            flex-flow: column wrap;
+            justify-content: space-between;            
+        }
+        .flex-item{
+            align-content: center;
         }
     </style>
 </head>
