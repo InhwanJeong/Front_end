@@ -1,0 +1,70 @@
+.menu{
+    display: flex;
+}
+
+.menu-item{
+    background-color: gold;        
+    flex-grow: 1;
+    /* width: 25%; */
+}
+
+.menu-item:hover{
+    background-color: red;
+    transition: 0.5s;
+    flex-grow: 1.5;
+    /* width: 35%; */
+    /* 인터넷 익스플로어는 width로 해주어야 함 */
+}
+
+.menu-link{
+    display: block;/* a태그가 글자뿐만 아니라 블럭 내 아무곳을 눌러도 같이 클릭되게 변경 */
+    padding: 1em;/* 1em: 폰트사이즈 만큼 패딩을 준다 */
+    font-size: 1.2rem;/* 1.2rem: 현재 html에 지정된 폰트 사이즈의 1.2배 크기로 설정 */
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-link:hover{
+    color: white;
+}
+
+
+
+.container{
+    width: 100%;
+    background-color: #333333;
+}
+
+.menu_apple{    
+    display: flex;                
+    background-color: #333333;
+    justify-content: space-between;     
+    width: 701px;
+    margin: 0 auto;
+
+}
+
+.menu-item_apple{
+}
+
+.menu-link_apple{
+    padding: 1em;
+    font-size: 1rem;
+    color: #F5F5F7;
+    text-decoration: none;    
+    text-align: center;
+    word-break: break-all;
+}
+
+.menu-link_apple:hover{
+    color: antiquewhite;
+    transition: 0.5s;
+}
+
+@media(max-width: 700px){
+    .menu_apple{
+        flex-direction: column;    
+    }
+}
