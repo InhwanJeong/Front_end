@@ -15,3 +15,17 @@ Html, css, javascripts
 
 
 ![./picture/carousel-ex.gif](./picture/carousel-ex.gif)
+
+
+## Menu
+- html, css만 이용하여 제작
+- [프로젝트 링크](./flex/flex_menu)
+- 간단한 소개
+  - 간단한 메뉴바 및 애플 헤더를 클론코딩했습니다.
+  - flex 속성을 이용하여 제작했습니다.
+- 시행착오
+  - 애플 메뉴바를 클론 코딩할때 문제가 발생
+    1. 메뉴바가 가운데 정렬이 되어 있고 양 옆의 마진이 커지고 작아지는 움직임을 동일하게 구현하는데 어려움이 있었습니다.
+    2. 해결책이 맞는지 모르지만 동일하게 동작하게 구현하였습니다.(자세한 내용은 소스코드 확인)
+
+![./picture/Menu.gif](./picture/Menu.gif)
