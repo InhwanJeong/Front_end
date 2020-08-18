@@ -29,3 +29,16 @@ Html, css, javascripts
     2. 해결책이 맞는지 모르지만 동일하게 동작하게 구현하였습니다.(자세한 내용은 소스코드 확인)
 
 ![./picture/Menu.gif](./picture/Menu.gif)
+
+## Card List
+- html, css만 이용하여 제작
+- [프로젝트 링크](./flex/flex_card_list)
+- 간단한 소개
+  - flex속성을 이용한 카드 리스트
+- 제작과정
+  1. 사진 영역과 설명 영역을 나눈다.
+  2. media 쿼리를 이용하여 크기변경에 따라 카드수를 정한다.
+  3. padding과 margin을 이용하여 카드간 자연스러운 간격을 만들어준다.
+  4. flex-grow를 이용하여 같은 행의 카드 크기를 맞추어준다.
+
+![./picture/card_list.gif](./picture/card_list.gif)
