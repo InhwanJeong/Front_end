@@ -254,3 +254,94 @@ body {
         width: 33.33333%;
     }
 }
+
+/* footer */
+
+.footer{              
+    background-color: #fff;      
+}
+
+.footer-a{            
+    display: flex;
+    justify-content: space-around;
+    border-style: solid;
+    border-top-width : 1px;
+    border-bottom-width: 1px;
+    border-color: lightgray;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+}
+
+.notice-desc{
+    
+}
+
+.notice-top{
+    display: flex;
+    padding-bottom: 0.3em;
+}
+
+.more-notice{
+    margin-left: 50px;
+    font-size: 1.5em;
+    align-self: center;
+}
+
+.notice{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.notice-item{
+    padding-bottom: 0.3em;
+    color: black;
+    text-align: left;
+    
+}
+
+
+.sns-desc{
+    display: flex;
+    align-items: flex-end;
+    padding: 0.3em;    
+}
+
+
+.sector-a{    
+    padding: 0.3em;    
+    color: black;    
+    font-weight: bold;
+}
+
+.sector-a-item{
+    padding-top: 0.8em;
+}
+
+.sector-b{    
+    padding: 0.3em;
+}
+
+.footer-b{
+    border-style: solid;    
+    border-bottom-width: 1px;   
+    border-color: lightgray;    
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 6em;
+}
+
+.developer-desc{
+    display: flex;
+    flex-direction: column;
+    padding-right: 12em;
+}
+
+.developer-desc-name{
+    font-size: 2.5em;
+    color: black;  
+    text-align: left;
+}
+
+.developer-desc-item{
+    display: flex;
+}
