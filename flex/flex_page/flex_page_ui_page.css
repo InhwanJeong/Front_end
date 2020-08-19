@@ -1,0 +1,42 @@
+.main{
+    margin-top: 500px;
+    padding: 1rem;
+}
+
+.side{
+    margin-top: 500px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.side-a{
+
+}
+
+.side-b{
+
+}
+
+.footer{
+    padding: 1rem;
+    text-align: center;
+}
+
+@media(min-width: 1024px){
+    .main-content{
+        display: flex;        
+    }      
+    .side-a{
+        width: 15%;
+        order: -1;
+    }
+    
+    .main{
+        width: 70%;
+    }
+    
+    .side-b{
+        width: 15%;
+        
+    }
+}
