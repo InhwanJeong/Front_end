@@ -42,3 +42,15 @@ Html, css, javascripts
   4. flex-grow를 이용하여 같은 행의 카드 크기를 맞추어준다.
 
 ![./picture/card_list.gif](./picture/card_list.gif)
+
+
+## 종합 flex Page
+- 미리 만들어 놓았던 아이템들을 이용하여 페이지 제작
+- [프로젝트 링크](./flex/flex_page)
+- 간단한 소개
+  - flex 디스플레이를 이용하여 모바일, pc버전 등으로 화면사이즈 변경에 따라 유연하게 변하는 사이트 제작
+- 제작과정
+  1. header, side-left, side-right, main, footer 영역으로 나눔
+  2. flex 컨테이너와 미디어쿼리를 이용하여 유연한 사이트제작
+
+![./picture/flex_page.gif](./picture/flex_page.gif)
