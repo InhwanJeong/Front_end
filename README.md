@@ -13,6 +13,19 @@ Html, css, javascripts
     - css는 아이템값을 실제로 바꾸지 않는다.
     - 대부분의 css 애니메이션을 js코드로 바꿈 -> 아이템 값 실제로 변경  
 
+#### react carousel
+- 위 캐러셀을 react에서 적용하기 위해 소스코드 변경
+  - 간단한 소개
+    - carousel을 component로 변경
+  - 시행착오
+    - 프로젝트 이미지 경로, process.env.PUBLIC_URL
+    ```
+      <div class="slider__item"><img src="dogs.jpg"></div>
+
+      -> <div className="slider__item"><img src={process.env.PUBLIC_URL + '/images/dogs.jpg'} alt="img"></img></div>
+    ```
+    - windows.onload() -> componentDidMount()로 변경
+    - 이벤트 리스너 변경, window.addEventListener('resize', circleSliderResize);        
 
 ![./picture/carousel-ex.gif](./picture/carousel-ex.gif)
 
